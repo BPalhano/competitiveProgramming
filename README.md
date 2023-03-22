@@ -2,7 +2,7 @@
 
 ## List of questions on gived on class:
 
-0. [Lista0: Esquenta](https://github.com/BPalhano/competitiveProgramming/tree/main/lista0)
+0. [Lista0: Esquenta](https://github.com/BPalhano/competitiveProgramming/tree/main/Lists/lista0)
 
 ## Algoritms developed for competitive programming (ICPC)
 
