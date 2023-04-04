@@ -43,3 +43,5 @@ The main ideia is to use ```orientation( )``` (the same function we build in lin
 
 ### Algorithm:
 
+[Diagram](../../images/Unittled \ Diagram.jpg)
+
