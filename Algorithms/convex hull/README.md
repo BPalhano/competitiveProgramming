@@ -7,7 +7,7 @@ Before we discuss the solution of this problem, let us define notion of *orienta
 + Clockwise;
 + Collinear;
 
-[oriented_diagram](../../images/oriented_diagram.png)
+[oriented_diagram](../../../images/oriented_diagram.png)
 
 **How we can use orientation here?**
 
@@ -18,7 +18,7 @@ Two segments (p1, q1) and (p2, q2) intersect if and only if one of the following
 + (p1,q1,p2) and (p1,q1,q2) have different orientations;
 + (p2,q2,p1) and (p2,q2,q1) have different orientations;
 
-[orientations](../../images/orientation.png)
+[orientations](../../../images/orientation.png)
 
 ## Special Case
 
@@ -26,12 +26,12 @@ Two segments (p1, q1) and (p2, q2) intersect if and only if one of the following
 + the x-projections of (p1, q1) and (p2, q2) intersect;
 + the y-projections of (p1, q1) and (p2, q2) intersect;
 
-[intersect](../../images/intersect.png)
+[intersect](../../../images/intersect.png)
 
 but,  **how this can help us with convex hull problem?**
 
 
-[convex_hull](../../images/convex_hull_ex_1.png)
+[convex_hull](../../../images/convex_hull_ex_1.png)
 
 We first will study the Jarvis's Algorithm to resolve this problem.
 
@@ -43,5 +43,5 @@ The main ideia is to use ```orientation( )``` (the same function we build in lin
 
 ### Algorithm:
 
-[Diagram](../../images/Unittled \ Diagram.jpg)
+[Diagram](../../../images/Unittled \ Diagram.jpg)
 
