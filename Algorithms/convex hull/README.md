@@ -7,7 +7,7 @@ Before we discuss the solution of this problem, let us define notion of *orienta
 + Clockwise;
 + Collinear;
 
-[oriented_diagram](../../../images/oriented_diagram.png)
+![oriented_diagram](../../../images/oriented_diagram.jpg "Oriented_diagram")
 
 **How we can use orientation here?**
 
@@ -43,5 +43,16 @@ The main ideia is to use ```orientation( )``` (the same function we build in lin
 
 ### Algorithm:
 
-[Diagram](../../../images/Unittled \ Diagram.jpg)
+[Diagram](../../images/Unittled \ Diagram.jpg)
+
+_The jarvis.cpp (In Algorithms/ Convex Hull/ jarvis.cpp) describes this algorithm._
+
+[Monotone](/../../images/monotone.png)
+
+The Monotone chain algorithm:  Monotone chain algorithm constructs the convex hull in O(n * log(n)) time. We have to sort the points first and then calculate the upper and lower hulls in O(n) time. The points will be sorted with respect to x-coordinates (with respect to y-coordinates in case of a tie in x-coordinates), we will then find the left most point and then try to rotate in clockwise direction and find the next point and then repeat the step until we reach the rightmost point and then again rotate in the clockwise direction and find the lower hull.
+
+_The monotone_chain.cpp (In Algorithms/ Convex Hull/ monotone_chain.cpp) describes this algorithm._
+
+tempoi real?
+
 

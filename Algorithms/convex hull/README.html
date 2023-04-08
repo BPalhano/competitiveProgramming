@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1>Convex Hull</h1>
+
+<p>Given two line segments (p1, q1) and (p2, q2), find if the given line segments intersect with each other.
+Before we discuss the solution of this problem, let us define notion of <em>orientation</em>. Orientation of an ordered triplet of poinst in the plane can be:</p>
+
+<ul>
+<li>Counterclockwise;</li>
+<li>Clockwise;</li>
+<li>Collinear;</li>
+</ul>
+
+
+<p><img src="../../../images/oriented_diagram.jpg" title="Oriented_diagram" alt="oriented_diagram" /></p>
+
+<p><strong>How we can use orientation here?</strong></p>
+
+<p>Two segments (p1, q1) and (p2, q2) intersect if and only if one of the following two conditions is verified:</p>
+
+<h2>General Case</h2>
+
+<ul>
+<li>(p1,q1,p2) and (p1,q1,q2) have different orientations;</li>
+<li>(p2,q2,p1) and (p2,q2,q1) have different orientations;</li>
+</ul>
+
+
+<p><a href="../../../images/orientation.png">orientations</a></p>
+
+<h2>Special Case</h2>
+
+<ul>
+<li>(p1, q1, p2), (p1, q1, q2), (p2, q2, p1) and (p2, q2, q1) are all collinear;</li>
+<li>the x-projections of (p1, q1) and (p2, q2) intersect;</li>
+<li>the y-projections of (p1, q1) and (p2, q2) intersect;</li>
+</ul>
+
+
+<p><a href="../../../images/intersect.png">intersect</a></p>
+
+<p>but,  <strong>how this can help us with convex hull problem?</strong></p>
+
+<p><a href="../../../images/convex_hull_ex_1.png">convex_hull</a></p>
+
+<p>We first will study the Jarvis&rsquo;s Algorithm to resolve this problem.</p>
+
+<p>The ideia of Jarvis&rsquo;s Algorithm is simple, we start from the leftmost point (or point with minimum x coordinate value) and we keep wrapping points in counterclockwise direction.</p>
+
+<p>The big question is, given a point as current point, how to find the next point in output?</p>
+
+<p>The main ideia is to use <code>orientation( )</code> (the same function we build in line_segment problem above). Next point is selected as the point that beats all other points at counterclockwise orientation, i.e., <strong>next point is q if for any other point r, we have <code>orientation(p,q,r) = counterclockwise</code></strong>.</p>
+
+<h3>Algorithm:</h3>
+
+<p><a href="../../images/Unittled%20%20Diagram.jpg">Diagram</a></p>
+
+<p><em>The jarvis.cpp (In Algorithms/ Convex Hull/ jarvis.cpp) describes this algorithm.</em></p>
+
+<p><a href="/../../images/monotone.png">Monotone</a></p>
+
+<p>The Monotone chain algorithm:  Monotone chain algorithm constructs the convex hull in O(n * log(n)) time. We have to sort the points first and then calculate the upper and lower hulls in O(n) time. The points will be sorted with respect to x-coordinates (with respect to y-coordinates in case of a tie in x-coordinates), we will then find the left most point and then try to rotate in clockwise direction and find the next point and then repeat the step until we reach the rightmost point and then again rotate in the clockwise direction and find the lower hull.</p>
+
+<p><em>The monotone_chain.cpp (In Algorithms/ Convex Hull/ monotone_chain.cpp) describes this algorithm.</em></p>
+
+<p>tempoi real?</p>
+
+</body>
+</html>
